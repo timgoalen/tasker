@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { inconsolata } from "./ui/fonts";
+import "./ui/globals.css";
 
 export const metadata: Metadata = {
   title: "Tasker",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      {/* 'antialiased' is a Tailwind class */}
+      <body className={`${inconsolata.className} antialiased`}>
+        {children}</body>
     </html>
   );
 }
