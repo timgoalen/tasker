@@ -9,42 +9,34 @@ export default function SideNav() {
   const pathname = usePathname();
 
   return (
-    <>
-      <h2>Dashboard Nav</h2>
-
+    <div className="side-nav">
       <Link
         href="/"
-        className={clsx("text-blue-800", pathname === "/" ? "text-red-800" : "")}
+        className={clsx(
+          "grey-text nav-link",
+          pathname === "/" ? "black-text nav-link" : "nav-link"
+        )}
       >
         Home
       </Link>
       <Link
-        href="/dashboard/signup"
-        className={clsx(
-          "text-blue-800",
-          pathname === "/dashboard/signup" ? "text-red-800" : ""
-        )}
-      >
-        Sign Up
-      </Link>
-      <Link
-        href="/dashboard/login"
-        className={clsx(
-          "text-blue-800",
-          pathname === "/dashboard/login" ? "text-red-800" : ""
-        )}
-      >
-        Log In
-      </Link>
-      <Link
         href="/dashboard/workspaces"
         className={clsx(
-          "text-blue-800",
-          pathname === "/dashboard/workspaces" ? "text-red-800" : ""
+          "grey-text nav-link",
+          pathname === "/" ? "black-text nav-link" : "nav-link"
         )}
       >
         Workspaces
       </Link>
-    </>
+      <Link
+        href="/dashboard/login"
+        className={clsx(
+          "grey-text nav-link",
+          pathname === "/" ? "black-text nav-link" : "nav-link"
+        )}
+      >
+        Log In
+      </Link>
+    </div>
   );
 }

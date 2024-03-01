@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { inconsolata } from "./ui/fonts";
 import "./ui/globals.css";
+import Dashboard from "./ui/dashboard/Dashboard";
 
 export const metadata: Metadata = {
-  title: "Tasker",
+  title: "tasker",
   description: "Developer Task Tool",
 };
 
@@ -16,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       {/* 'antialiased' is a Tailwind class */}
       <body className={`${inconsolata.className} antialiased`}>
-        {children}</body>
+        <Dashboard />
+        {children}
+      </body>
     </html>
   );
 }

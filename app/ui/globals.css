@@ -3,20 +3,70 @@
 @tailwind utilities;
 
 :root {
+  --primary-colour: #048178;
+  --grey: #787878;
+  --black: #000;
 }
 
-main {
+.site-title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: var(--primary-colour);
+  border-bottom: 1px solid var(--primary-colour);
+  padding: 1.2rem;
+}
+
+.page-title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  padding: 1.2rem;
+}
+
+.dashboard-container {
+  height: 100dvh;
+  width: 15%;
+  border-right: 1px solid var(--primary-colour);
+  position: fixed;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  padding: 1.2rem 0 0 1.2rem;
+}
+
+header {
+  width: 85%;
+  margin-left: auto;
+  border-bottom: 1px solid var(--primary-colour);
+}
+
+.header-left {
+  font-size: 2.1rem;
+}
+
+.header-right {
 }
 
 .page-container {
-  margin: 0.5rem;
+  width: 85%;
+  margin-left: auto;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
+.page-content {
+  padding: 1.2rem;
 }
 
-h2 {
-  font-size: 2rem;
+/* UTILS */
+
+.grey-text {
+  color: var(--grey);
+}
+
+.black-text {
+  color: var(--black);
 }
