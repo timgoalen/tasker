@@ -20,19 +20,19 @@ export default function SideNav() {
         Home
       </Link>
       <Link
-        href="/dashboard/workspaces"
+        href="/workspaces"
         className={clsx(
           "grey-text nav-link",
-          pathname === "/" ? "black-text nav-link" : "nav-link"
+          pathname === "/workspaces" ? "black-text nav-link" : "nav-link"
         )}
       >
         Workspaces
       </Link>
       <Link
-        href="/dashboard/login"
+        href="/login"
         className={clsx(
           "grey-text nav-link",
-          pathname === "/" ? "black-text nav-link" : "nav-link"
+          pathname === "/login" ? "black-text nav-link" : "nav-link"
         )}
       >
         Log In

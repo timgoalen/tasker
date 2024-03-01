@@ -1,20 +1,33 @@
 .container {
-    display: grid;
-    grid-template-columns: 3% 45% 45% 15%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3% 45% 45% 15%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.container:hover {
+    background-color: #d0451b0d;
+    cursor: pointer;;
 }
 
 .icon {
-
+  color: var(--secondary-colour-light);
 }
 
 .title {
-
+    font-size: 1.25rem;
 }
 
 .date {
-
+  color: var(--grey);
 }
 
 .options {
+  color: var(--grey);
+}
 
+.spacer {
+  border-bottom: 1px solid var(--secondary-colour-light);
+  margin: 0 5% 1rem 3%;
 }

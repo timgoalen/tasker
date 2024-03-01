@@ -4,6 +4,9 @@
 
 :root {
   --primary-colour: #048178;
+  --primary-colour-light: #04817880;
+  --secondary-colour: #D0451B;
+  --secondary-colour-light: #D0451B80;
   --grey: #787878;
   --black: #000;
 }
@@ -12,7 +15,7 @@
   font-size: 2.1rem;
   font-weight: bold;
   color: var(--primary-colour);
-  border-bottom: 1px solid var(--primary-colour);
+  border-bottom: 1px solid var(--primary-colour-light);
   padding: 1.2rem;
 }
 
@@ -23,9 +26,10 @@
 }
 
 .dashboard-container {
+  height: 100vh;
   height: 100dvh;
   width: 15%;
-  border-right: 1px solid var(--primary-colour);
+  border-right: 1px solid var(--primary-colour-light);
   position: fixed;
 }
 
@@ -42,7 +46,7 @@
 header {
   width: 85%;
   margin-left: auto;
-  border-bottom: 1px solid var(--primary-colour);
+  border-bottom: 1px solid var(--primary-colour-light);
 }
 
 .header-left {
