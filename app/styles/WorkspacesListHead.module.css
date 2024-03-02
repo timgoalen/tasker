@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3% 57% 40%;
+  height: 3.5rem;
+  border-bottom: 1px solid #00000020;
+}
+
+.icon {
+  color: var(--grey);
+  display: grid;
+  place-items: center;
+}
+
+.icon svg {
+  width: 1rem;
+}
+
+.text {
+  font-size: 1.25rem;
+  padding-left: 0.75rem;
+  color: var(--grey);
+}
+
+.filter {
+  color: var(--grey);
+  padding-left: 1.4rem;
+}
+
+.filter svg {
+  width: 1rem;
+}

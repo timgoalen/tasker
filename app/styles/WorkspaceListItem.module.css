@@ -1,22 +1,29 @@
 .container {
   display: grid;
   align-items: center;
-  grid-template-columns: 3% 45% 45% 15%;
-  margin-bottom: 1rem;
+  grid-template-columns: 3% 57% 37% 3%;
   border-radius: 8px;
+  height: 3.5rem;
 }
 
 .container:hover {
-    background-color: #d0451b0d;
-    cursor: pointer;;
+  background-color: #d0451b0d;
+  cursor: pointer;
 }
 
 .icon {
   color: var(--secondary-colour-light);
+  display: grid;
+  place-items: center;
+}
+
+.icon svg {
+  width: 1rem;
 }
 
 .title {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
+  padding-left: 0.75rem;
 }
 
 .date {
@@ -25,9 +32,16 @@
 
 .options {
   color: var(--grey);
+  display: grid;
+  place-items: center;
+}
+
+.options svg {
+  height: 1rem;
 }
 
 .spacer {
   border-bottom: 1px solid var(--secondary-colour-light);
-  margin: 0 5% 1rem 3%;
+  width: calc(97% - 0.75rem);
+  margin-left: calc(3% + 0.75rem);
 }
