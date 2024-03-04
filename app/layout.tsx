@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+
+import "./styles/globals.css";
 import { inconsolata } from "./ui/fonts";
-import "./ui/globals.css";
 import Dashboard from "./ui/dashboard/Dashboard";
 
 export const metadata: Metadata = {

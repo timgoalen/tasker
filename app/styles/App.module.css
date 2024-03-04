@@ -1,0 +1,13 @@
+.container {
+  width: 65%;
+  margin: auto;
+}
+
+.content {
+  padding: 1.2rem;
+  box-shadow: var(--page-box-shadow);
+  min-height: 88vh;
+  min-height: 88dvh;
+  border-radius: 6px;
+  background-color: var(--white);
+}

@@ -12,30 +12,33 @@ export default function SideNav() {
     <div className="side-nav">
       <Link
         href="/"
-        className={clsx(
-          "grey-text nav-link",
-          pathname === "/" ? "black-text nav-link" : "nav-link"
-        )}
+        // className={clsx(
+        //   "grey-text nav-link",
+        //   pathname === "/" ? "black-text nav-link" : "nav-link"
+        // )}
+        className="grey-text nav-link"
       >
         Home
       </Link>
       <Link
         href="/workspaces"
-        className={clsx(
-          "grey-text nav-link",
-          pathname === "/workspaces" ? "black-text nav-link" : "nav-link"
-        )}
+        // className={clsx(
+        //   "grey-text nav-link",
+        //   pathname === "/workspaces" ? "black-text nav-link" : "nav-link"
+        // )}
+        className="grey-text nav-link"
       >
         Workspaces
       </Link>
       <Link
-        href="/login"
-        className={clsx(
-          "grey-text nav-link",
-          pathname === "/login" ? "black-text nav-link" : "nav-link"
-        )}
+        href="/signin"
+        // className={clsx(
+        //   "grey-text nav-link",
+        //   pathname === "/login" ? "black-text nav-link" : "nav-link"
+        // )}
+        className="grey-text nav-link"
       >
-        Log In
+        Sign In
       </Link>
     </div>
   );

@@ -1,0 +1,80 @@
+.container {
+  height: 75vh;
+  height: 75dvh;
+  display: grid;
+  place-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 0 1.2rem;
+  box-shadow: var(--page-box-shadow);
+  border-radius: 6px;
+  padding: 1rem 2rem;
+  background-color: var(--white);
+}
+
+.form label {
+  color: var(--grey);
+  font-size: 1.2rem;
+}
+
+.form p {
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
+.form p:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.form input {
+  border-radius: 4px;
+  border: 1px solid var(--primary-colour-light);
+  margin: 0.5rem 0;
+  height: 2rem;
+  padding: 0.4rem;
+}
+
+.form button {
+  border-radius: 24px;
+  border: 1px solid var(--secondary-colour-light);
+  margin: 1rem 0;
+  height: 2.2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.spacerContainer {
+  display: grid;
+  grid-template-columns: 43% 14% 43%;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+.spacerContainer p {
+  text-align: center;
+  color: var(--grey-light);
+}
+
+.spacer {
+  border-bottom: 1px solid #5555554a;
+}
+
+.socialBtn {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  width: 1rem;
+  left: 8px;
+  top: 8px;
+  color: var(--secondary-colour-light);
+}
+
+.highlighted {
+    color: var(--primary-colour);
+}
