@@ -1,6 +1,7 @@
-import Header from "../ui/Header";
-import WorkspaceListItem from "../ui/WorkspaceListItem";
-import WorkspacesListHead from "../ui/WorkspacesListHead";
+import Header from "../ui/header/Header";
+import WorkspacesListHead from "../ui/workspaces/WorkspacesListHead";
+import WorkspaceListItem from "../ui/workspaces/WorkspaceListItem";
+import WorkspaceListSpacer from "../ui/workspaces/WorkspaceListSpacer";
 
 export default function Page() {
   return (
@@ -11,11 +12,17 @@ export default function Page() {
           <WorkspacesListHead />
 
           <WorkspaceListItem />
+          <WorkspaceListSpacer />
           <WorkspaceListItem />
+          <WorkspaceListSpacer />
           <WorkspaceListItem />
+          <WorkspaceListSpacer />
           <WorkspaceListItem />
+          <WorkspaceListSpacer />
           <WorkspaceListItem />
+          <WorkspaceListSpacer />
           <WorkspaceListItem />
+          <WorkspaceListSpacer />
           <WorkspaceListItem />
         </div>
       </section>

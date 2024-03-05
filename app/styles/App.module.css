@@ -4,10 +4,11 @@
 }
 
 .content {
-  padding: 1.2rem;
-  box-shadow: var(--page-box-shadow);
   min-height: 88vh;
   min-height: 88dvh;
+  padding: 2rem;
   border-radius: 6px;
+  box-shadow: var(--page-box-shadow);
   background-color: var(--white);
+  font-size: 1.25rem;
 }

@@ -1,4 +1,4 @@
-import Header from "../ui/Header";
+import Header from "../ui/header/Header";
 import SignInForm from "../ui/signin/SignInForm";
 
 export default function Page() {

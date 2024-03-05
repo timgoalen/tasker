@@ -20,8 +20,6 @@ export default function WorkspaceListItem() {
           <FontAwesomeIcon icon={faEllipsisVertical} />
         </div>
       </div>
-
-      <div className={styles.spacer}></div>
     </>
   );
 }

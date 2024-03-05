@@ -6,7 +6,7 @@ import Dashboard from "./ui/dashboard/Dashboard";
 
 export const metadata: Metadata = {
   title: "tasker",
-  description: "Developer Task Tool",
+  description: "A Developer Task Tool",
 };
 
 export default function RootLayout({

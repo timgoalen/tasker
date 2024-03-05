@@ -1,9 +1,14 @@
 .container {
   display: grid;
   align-items: center;
-  grid-template-columns: 3% 57% 40%;
+  grid-template-columns: 60% 40%;
   height: 3.5rem;
   border-bottom: 1px solid #00000020;
+}
+
+.addNew {
+  display: grid;
+  grid-template-columns: 5% 95%;
 }
 
 .icon {
@@ -25,8 +30,25 @@
 .filter {
   color: var(--grey);
   padding-left: 1.4rem;
+  cursor: pointer;
+}
+
+.filter:hover {
+  color: var(--black);
 }
 
 .filter svg {
   width: 1rem;
+}
+
+.addNew:hover {
+  cursor: pointer;
+}
+
+.addNew:hover .text {
+  color: var(--primary-colour);
+}
+
+.addNew:hover .icon {
+  color: var(--primary-colour);
 }

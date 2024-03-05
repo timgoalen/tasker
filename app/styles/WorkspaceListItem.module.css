@@ -8,7 +8,6 @@
 
 .container:hover {
   background-color: #d0451b0d;
-  cursor: pointer;
 }
 
 .icon {
@@ -26,6 +25,10 @@
   padding-left: 0.75rem;
 }
 
+.title:hover {
+  cursor: pointer;
+}
+
 .date {
   color: var(--grey);
 }
@@ -36,12 +39,11 @@
   place-items: center;
 }
 
-.options svg {
-  height: 1rem;
+.options:hover {
+  cursor: pointer;
+  color: var(--black);
 }
 
-.spacer {
-  border-bottom: 1px solid var(--secondary-colour-light);
-  width: calc(97% - 0.75rem);
-  margin-left: calc(3% + 0.75rem);
+.options svg {
+  height: 1rem;
 }

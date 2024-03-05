@@ -1,0 +1,5 @@
+.spacer {
+  border-bottom: 1px solid var(--secondary-colour-light);
+  width: calc(97% - 0.75rem);
+  margin-left: calc(3% + 0.75rem);
+}
