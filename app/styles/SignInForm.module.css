@@ -45,6 +45,11 @@
   height: 2.2rem;
   font-weight: 500;
   font-size: 1.2rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form button:hover {
+  background-color: #d0451b0d;
 }
 
 .spacerContainer {
@@ -54,13 +59,14 @@
   align-items: center;
 }
 
-.spacerContainer p {
+.spacerText {
   text-align: center;
   color: var(--grey-light);
+  padding-bottom: 0.5rem;
 }
 
 .spacer {
-  border-bottom: 1px solid #5555554a;
+  border-bottom: 1px solid #5555552e;
 }
 
 .socialBtn {
@@ -73,8 +79,18 @@
   left: 8px;
   top: 8px;
   color: var(--secondary-colour-light);
+  transition: color 0.2s ease-in-out;
 }
 
 .highlighted {
-    color: var(--primary-colour);
+  color: var(--primary-colour-dark);
+}
+
+.highlighted:hover {
+  cursor: pointer;
+}
+
+.forgotPassword:hover {
+  cursor: pointer;
+  color: var(--primary-colour-dark);
 }

@@ -6,9 +6,10 @@
   --background-colour: #fdfdfd;
   --primary-colour: #048178;
   --primary-colour-light: #04817880;
+  --primary-colour-dark: #03635c;
   --secondary-colour: #d0451b;
-  --secondary-colour-light: #d0451b69;
-  --grey: #727272;
+  --secondary-colour-light: #d0451b80;
+  --grey: #585858;
   --grey-light: #555555;
   --black: #000;
   --white: #fff;

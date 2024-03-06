@@ -13,7 +13,7 @@ export default function SignInForm() {
         <label>Password</label>
         <input type="password"></input>
 
-        <p>Forgot your password?</p>
+        <p className={styles.forgotPassword}>Forgot your password?</p>
 
         <button>Sign In</button>
 
@@ -21,7 +21,9 @@ export default function SignInForm() {
 
         <div className={styles.spacerContainer}>
           <span className={styles.spacer}></span>
-          <p> or </p>
+          <div className={styles.spacerText}>
+            <p> or </p>
+          </div>
           <span className={styles.spacer}></span>
         </div>
 
