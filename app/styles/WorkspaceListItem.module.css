@@ -8,7 +8,7 @@
 }
 
 .container:hover {
-  background-color: #d161400d;
+  background-color: var(--light-hover);
 }
 
 .icon {

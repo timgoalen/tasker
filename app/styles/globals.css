@@ -13,6 +13,7 @@
   --grey-light: #555555;
   --black: #000;
   --white: #fff;
+  --light-hover: #d161400d;
   --page-box-shadow: 0px 4px 66px 19px rgba(0, 0, 0, 0.05);
   --page-box-shadow-2: 0px 4px 66px 19px #04817826;
 }
@@ -36,10 +37,8 @@ body {
 }
 
 .dashboard-container {
-  height: 100vh;
-  height: 100dvh;
-  width: 15%;
   position: fixed;
+  top: 2rem;
 }
 
 .side-nav {
