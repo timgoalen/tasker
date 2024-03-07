@@ -8,8 +8,8 @@ export default function WorkspaceToolBox() {
   return (
     <motion.div
       className={styles.container}
-      transition={{ duration: 0.1 }}
-      initial={{ y: -30, opacity: 0, scale: 0.05 }}
+      transition={{ duration: 0.05 }}
+      initial={{ y: -30, opacity: 0, scale: 0 }}
       animate={{ y: 0, opacity: 1, scale: 1 }}
     >
       <div className={styles.tool}>

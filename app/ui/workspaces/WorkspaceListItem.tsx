@@ -34,12 +34,13 @@ export default function WorkspaceListItem() {
 
         <div className={styles.date}>01/03/24</div>
 
-        <div
-          ref={ref}
-          className={styles.options}
-          onClick={toggleVisibility}
-        >
-          <FontAwesomeIcon icon={faEllipsisVertical} />
+        <div ref={ref} className={styles.options} onClick={toggleVisibility}>
+          <FontAwesomeIcon
+            icon={faEllipsisVertical}
+            className={
+              showTools ? "rotate-initial rotate-90" : "rotate-initial"
+            }
+          />
         </div>
 
         {showTools && <WorkspaceToolBox />}

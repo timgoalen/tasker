@@ -85,3 +85,12 @@ header {
 .black-text {
   color: var(--black);
 }
+
+.rotate-initial {
+  transform: rotate(0deg);
+  transition: transform 0.05s ease-in;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
