@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder } from "@fortawesome/free-regular-svg-icons";
@@ -7,9 +7,17 @@ import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "@/app/styles/WorkspaceListItem.module.css";
 import WorkspaceToolBox from "./WorkspaceToolBox";
+import useClickOutside from "@/app/hooks/useClickOutside";
 
 export default function WorkspaceListItem() {
   const [showTools, setShowTools] = useState(false);
+  const ref = useRef(null);
+
+  function handleClickOutside() {
+    setShowTools(false);
+  }
+
+  useClickOutside(ref, handleClickOutside);
 
   return (
     <>
@@ -22,7 +30,11 @@ export default function WorkspaceListItem() {
 
         <div className={styles.date}>01/03/24</div>
 
-        <div className={styles.options} onClick={() => setShowTools(true)}>
+        <div
+          ref={ref}
+          className={styles.options}
+          onClick={() => setShowTools(true)}
+        >
           <FontAwesomeIcon icon={faEllipsisVertical} />
         </div>
 
