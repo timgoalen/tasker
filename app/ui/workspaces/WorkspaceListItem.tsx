@@ -13,6 +13,10 @@ export default function WorkspaceListItem() {
   const [showTools, setShowTools] = useState(false);
   const ref = useRef(null);
 
+  function toggleVisibility() {
+    setShowTools(!showTools);
+  }
+
   function handleClickOutside() {
     setShowTools(false);
   }
@@ -33,7 +37,7 @@ export default function WorkspaceListItem() {
         <div
           ref={ref}
           className={styles.options}
-          onClick={() => setShowTools(true)}
+          onClick={toggleVisibility}
         >
           <FontAwesomeIcon icon={faEllipsisVertical} />
         </div>
