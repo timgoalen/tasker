@@ -29,6 +29,10 @@ body {
   padding: 1.2rem 0 0 1.2rem;
 }
 
+.site-title:hover {
+  cursor: default;
+}
+
 .page-title {
   font-size: 2rem;
   font-weight: 500;
@@ -41,6 +45,10 @@ body {
   top: 2rem;
 }
 
+.nav {
+  display: flex;
+}
+
 .side-nav {
   display: flex;
   flex-direction: column;
@@ -49,6 +57,11 @@ body {
 .nav-link {
   font-size: 1.5rem;
   padding: 1.2rem 0 0 1.2rem;
+}
+
+.nav-link:hover {
+  /* text-decoration: underline; */
+  background-color: #fff;
 }
 
 header {
@@ -81,8 +94,9 @@ header {
   color: var(--grey);
 }
 
-.black-text {
-  color: var(--black);
+.active-link {
+  /* color: var(--black); */
+  color: var(--secondary-colour);
 }
 
 .rotate-initial {
