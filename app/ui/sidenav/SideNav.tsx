@@ -1,42 +1,39 @@
 "use client";
 import { useState } from "react";
 
-import { openSans } from "@/app/ui/fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
-import styles from "@/app/styles/Dashboard.module.css";
-import SideNav from "./SideNav";
+import styles from "@/app/styles/SideNav.module.css";
+import NavLinks from "./NavLinks";
 
-export default function Dashboard() {
-  const [isDashboardOpen, setIsDashboardOpen] = useState(false);
+export default function SideNav() {
+  const [isSideNavOpen, setIsSideNavOpen] = useState(true);
 
   return (
     <>
-      {isDashboardOpen ? (
-        <div onMouseLeave={() => setIsDashboardOpen(false)}>
+      {isSideNavOpen ? (
+        // Open Side Nav
+        <div onMouseLeave={() => setIsSideNavOpen(false)}>
           <button className={styles.icon}>
             <FontAwesomeIcon icon={faAnglesDown} />
           </button>
 
-          <motion.section
-            className="dashboard-container"
+          <motion.nav
+            className={styles.sideBar}
             transition={{ duration: 0.2 }}
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
           >
-            <div className={`${openSans.className} antialiased site-title`}>
-              tasker
-            </div>
-
-            <SideNav />
-          </motion.section>
+            <NavLinks />
+          </motion.nav>
         </div>
       ) : (
+        // Hamburger icon
         <button
           className={styles.icon}
-          onMouseEnter={() => setIsDashboardOpen(true)}
+          onMouseEnter={() => setIsSideNavOpen(true)}
         >
           <FontAwesomeIcon icon={faBars} />
         </button>

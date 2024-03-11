@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./styles/globals.css";
 import { inconsolata } from "./ui/fonts";
-import Dashboard from "./ui/dashboard/Dashboard";
+import SideNav from "./ui/sidenav/SideNav";
 
 export const metadata: Metadata = {
   title: "tasker",
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       {/* 'antialiased' is a Tailwind class */}
       <body className={`${inconsolata.className} antialiased`}>
-        <Dashboard />
+        <SideNav />
         {children}
       </body>
     </html>
