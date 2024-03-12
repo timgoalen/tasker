@@ -15,7 +15,9 @@ export default function SideNav() {
     <>
       {isSideNavOpen ? (
         // Open Side Nav
-        <div onMouseLeave={() => setIsSideNavOpen(false)}>
+        <div 
+        onMouseLeave={() => setIsSideNavOpen(false)}
+        >
           <button className={styles.icon}>
             <FontAwesomeIcon icon={faAnglesDown} />
           </button>

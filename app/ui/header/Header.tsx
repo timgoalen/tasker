@@ -1,6 +1,10 @@
 import { openSans } from "@/app/ui/fonts";
 
-export default function Header({ title }) {
+interface HeaderProps {
+  title: string;
+}
+
+export default function Header({ title }: HeaderProps) {
   return (
     <header>
       <div

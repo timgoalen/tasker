@@ -1,0 +1,18 @@
+.container {
+  /* outline: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.icon {
+  width: 16px;
+}
+
+.label {
+  font-size: 1.2rem;
+}
