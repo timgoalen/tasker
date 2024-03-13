@@ -9,36 +9,30 @@ import styles from "@/app/styles/SideNav.module.css";
 import NavLinks from "./NavLinks";
 
 export default function SideNav() {
-  const [isSideNavOpen, setIsSideNavOpen] = useState(true);
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
   return (
     <>
-      {isSideNavOpen ? (
-        // Open Side Nav
-        <div 
+      {/* Hamburger icon */}
+      <button
+        className={styles.icon}
+        onMouseEnter={() => setIsSideNavOpen(true)}
         onMouseLeave={() => setIsSideNavOpen(false)}
-        >
-          <button className={styles.icon}>
-            <FontAwesomeIcon icon={faAnglesDown} />
-          </button>
+      >
+        <FontAwesomeIcon icon={isSideNavOpen ? faAnglesDown : faBars} />
+      </button>
 
-          <motion.nav
-            className={styles.sideBar}
-            transition={{ duration: 0.2 }}
-            initial={{ x: -20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-          >
-            <NavLinks />
-          </motion.nav>
-        </div>
-      ) : (
-        // Hamburger icon
-        <button
-          className={styles.icon}
+      {isSideNavOpen && (
+        <motion.nav
+          className={styles.sideBar}
+          transition={{ duration: 0.2 }}
+          initial={{ x: -20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           onMouseEnter={() => setIsSideNavOpen(true)}
+          onMouseLeave={() => setIsSideNavOpen(false)}
         >
-          <FontAwesomeIcon icon={faBars} />
-        </button>
+          <NavLinks />
+        </motion.nav>
       )}
     </>
   );
