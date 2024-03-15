@@ -22,11 +22,7 @@ export default function NavItem({ href, label, icon }: NavItemProps) {
   return (
     <Link
       href={href}
-      className={styles.container}
-      //   className={clsx(
-      //     "grey-text nav-link",
-      //     pathname === "/" ? "active-link nav-link" : "nav-link"
-      //   )}
+      className={clsx(styles.container, pathname === href && styles.active)}
     >
       <FontAwesomeIcon icon={icon} className={styles.icon} />
       {/* <div className={`${openSans.className} antialiased ${styles.label}`}>

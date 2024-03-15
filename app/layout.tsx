@@ -5,7 +5,7 @@ import { inconsolata } from "./ui/fonts";
 import SideNav from "./ui/sidenav/SideNav";
 
 export const metadata: Metadata = {
-  title: "tasker",
+  title: "Tasker",
   description: "A Developer Task Tool",
 };
 

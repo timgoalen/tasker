@@ -9,11 +9,17 @@ import {
 export default function NavLinks() {
   return (
     <>
-      <Tooltip text="home">
+      <Tooltip text="Home">
         <NavItem href="/" label="Home" icon={faHome} />
       </Tooltip>
-      <NavItem href="/workspaces" label="Workspaces" icon={faFolderClosed} />
-      <NavItem href="/signin" label="Sign In" icon={faCircleUser} />
+
+      <Tooltip text="Workspaces">
+        <NavItem href="/workspaces" label="Workspaces" icon={faFolderClosed} />
+      </Tooltip>
+
+      <Tooltip text="Sign In">
+        <NavItem href="/signin" label="Sign In" icon={faCircleUser} />
+      </Tooltip>
     </>
   );
 }

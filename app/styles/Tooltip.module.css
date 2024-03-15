@@ -1,5 +1,23 @@
 .tooltip {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: relative;
+}
+
+.text {
+  opacity: 0;
+  transition: opacity ease-in 0.25s;
+  position: absolute;
+  top: 1.5rem;
+  left: 4.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--grey);
+  text-wrap: nowrap;
+  font-weight: 600;
+  box-shadow: var(--page-box-shadow);
+  cursor: default;
+}
+
+.tooltip:hover .text {
+  opacity: 1;
 }
