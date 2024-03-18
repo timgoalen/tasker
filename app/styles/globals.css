@@ -18,6 +18,8 @@
   --page-box-shadow-2: 0px 4px 66px 19px #04817826;
 }
 
+/* GLOBAL PAGE STYLES */
+
 body {
   background-color: var(--background-colour);
 }
@@ -27,23 +29,6 @@ body {
   font-weight: 600;
   padding: 1.2rem 0 1.2rem 1rem;
   color: var(--black);
-}
-
-.dashboard-container {
-  position: fixed;
-  top: 2rem;
-}
-
-header {
-  width: 65%;
-  margin: auto;
-}
-
-.header-left {
-  font-size: 2rem;
-}
-
-.header-right {
 }
 
 .page-container {
@@ -59,15 +44,6 @@ header {
 }
 
 /* UTILS */
-
-.grey-text {
-  color: var(--grey);
-}
-
-.active-link {
-  /* color: var(--black); */
-  color: var(--secondary-colour);
-}
 
 .rotate-initial {
   transform: rotate(0deg);

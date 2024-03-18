@@ -1,0 +1,11 @@
+.container {
+  width: 65%;
+  margin: auto;
+}
+
+.headerLeft {
+  font-size: 2rem;
+}
+
+.headerRight {
+}
