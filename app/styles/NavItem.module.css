@@ -10,7 +10,7 @@
   transition: background-color 0.15s;
 }
 
-.container:hover {
+.container:not(.active):hover {
   background-color: #f3f3f3;
   cursor: pointer;
 }

@@ -18,7 +18,7 @@ export default function Home() {
           <div>- open on hover </div>
           <div>- stay open on press </div>
           <div>- use framer motion </div>
-          <div>= change 'Workspaces' to 'Files'?</div>
+          <div>= change Workspaces to Files?</div>
           <div>
             = fix last-of border styles (have the same padding at bottom as on
             sides)
