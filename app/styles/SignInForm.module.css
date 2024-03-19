@@ -8,11 +8,11 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  padding: 0 1.2rem;
+  width: 96%;
+  max-width: 320px;
   box-shadow: var(--page-box-shadow-2);
   border-radius: 6px;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: var(--white);
 }
 
@@ -93,4 +93,10 @@
 .forgotPassword:hover {
   cursor: pointer;
   color: var(--primary-colour-dark);
+}
+
+@media screen and (min-width: 425px) {
+  .form {
+    padding: 1rem 2rem;
+  }
 }

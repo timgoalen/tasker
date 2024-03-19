@@ -4,13 +4,10 @@
 }
 
 .content {
-  min-height: 88vh;
-  min-height: 88dvh;
-  padding: 1rem;
-  border-radius: 6px;
+  padding: 0 1.2rem 0.6rem 1.2rem;
   box-shadow: var(--page-box-shadow);
+  border-radius: 6px;
   background-color: var(--white);
-  font-size: 1.25rem;
 }
 
 @media screen and (min-width: 640px) {
@@ -19,7 +16,7 @@
   }
 
   .content {
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
   }
 }
 
@@ -29,6 +26,6 @@
   }
 
   .content {
-    padding: 2rem;
+    /* padding: 2rem; */
   }
 }
