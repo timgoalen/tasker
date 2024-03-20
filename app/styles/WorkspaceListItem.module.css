@@ -1,8 +1,8 @@
 .container {
   display: grid;
   align-items: center;
-  grid-template-columns: 3% 57% 37% 3%;
-  border-radius: 3px;
+  grid-template-columns: 1.2rem 2fr 1fr 1.2rem;
+  border-radius: 4px;
   height: 3.5rem;
   position: relative;
 }
@@ -24,6 +24,9 @@
 .title {
   font-size: 1.25rem;
   padding-left: 0.75rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .title:hover {
@@ -51,4 +54,20 @@
 
 .options svg {
   height: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .date {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: 1.2rem 1fr 1.2rem;
+  }
 }

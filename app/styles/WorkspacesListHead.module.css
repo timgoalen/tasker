@@ -1,14 +1,15 @@
 .container {
+  width: calc(100% - 2.4rem);
   display: grid;
   align-items: center;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 2fr 1fr;
   height: 3.5rem;
   border-bottom: 1px solid #00000020;
 }
 
 .addNew {
   display: grid;
-  grid-template-columns: 5% 95%;
+  grid-template-columns: 1.2rem 1fr;
 }
 
 .icon {
@@ -29,7 +30,7 @@
 
 .filter {
   color: var(--grey);
-  padding-left: 1.4rem;
+  padding-left: 1.75rem;
   cursor: pointer;
 }
 
@@ -51,4 +52,20 @@
 
 .addNew:hover .icon {
   color: var(--primary-colour-dark);
+}
+
+@media screen and (max-width: 640px) {
+  .text {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .filter {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: 100%;
+  }
 }

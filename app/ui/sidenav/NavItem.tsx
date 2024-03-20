@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { Home } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
@@ -24,10 +25,8 @@ export default function NavItem({ href, label, icon }: NavItemProps) {
       href={href}
       className={clsx(styles.container, pathname === href && styles.active)}
     >
-      <FontAwesomeIcon icon={icon} className={styles.icon} />
-      {/* <div className={`${openSans.className} antialiased ${styles.label}`}>
-        {label}
-      </div> */}
+      <Home className={styles.icon} />
+      {/* <FontAwesomeIcon icon={icon} className={styles.icon} /> */}
     </Link>
   );
 }
