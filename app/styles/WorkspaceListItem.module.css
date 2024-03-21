@@ -52,10 +52,6 @@
   background-color: #e2e2e2;
 }
 
-.options svg {
-  height: 1rem;
-}
-
 @media screen and (max-width: 640px) {
   .title {
     font-size: 1.1rem;

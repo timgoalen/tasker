@@ -15,16 +15,6 @@
   cursor: pointer;
 }
 
-.icon {
-  height: 1.2rem;
-  width: 1.2rem;
-  color: var(--grey);
-}
-
-.label {
-  font-size: 1.2rem;
-}
-
 .active {
   background-color: #0b714c1f;
 }

@@ -1,24 +1,28 @@
+import { Home, Files, UserRound } from "lucide-react";
+
+import styles from "@/app/styles/NavLinks.module.css";
 import NavItem from "./NavItem";
 import Tooltip from "./Tooltip";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFolderClosed,
-  faCircleUser,
-} from "@fortawesome/free-regular-svg-icons";
 
 export default function NavLinks() {
   return (
     <>
       <Tooltip text="Home">
-        <NavItem href="/" label="Home" icon={faHome} />
+        <NavItem href="/">
+          <Home className={styles.icon} />
+        </NavItem>
       </Tooltip>
 
       <Tooltip text="Workspaces">
-        <NavItem href="/workspaces" label="Workspaces" icon={faFolderClosed} />
+        <NavItem href="/workspaces">
+          <Files className={styles.icon} />
+        </NavItem>
       </Tooltip>
 
       <Tooltip text="Sign In">
-        <NavItem href="/signin" label="Sign In" icon={faCircleUser} />
+        <NavItem href="/signin">
+          <UserRound className={styles.icon} />
+        </NavItem>
       </Tooltip>
     </>
   );

@@ -1,9 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolder } from "@fortawesome/free-regular-svg-icons";
-import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+import { File, EllipsisVertical } from "lucide-react";
 
 import styles from "@/app/styles/WorkspaceListItem.module.css";
 import WorkspaceToolBox from "./WorkspaceToolBox";
@@ -27,7 +25,7 @@ export default function WorkspaceListItem() {
     <>
       <div className={styles.container}>
         <div className={styles.icon}>
-          <FontAwesomeIcon icon={faFolder} />
+          <File />
         </div>
 
         <div className={styles.title}>Workspace Title Goes Here</div>
@@ -35,11 +33,11 @@ export default function WorkspaceListItem() {
         <div className={styles.date}>01/03/24</div>
 
         <div ref={ref} className={styles.options} onClick={toggleVisibility}>
-          <FontAwesomeIcon
-            icon={faEllipsisVertical}
+          <EllipsisVertical
             className={
               showTools ? "rotate-initial rotate-90" : "rotate-initial"
             }
+            size={16}
           />
         </div>
 

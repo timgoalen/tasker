@@ -3,21 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { Home } from "lucide-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
-import { openSans } from "@/app/ui/fonts";
 import styles from "@/app/styles/NavItem.module.css";
 
 interface NavItemProps {
   href: string;
-  label: string;
-  icon: IconDefinition;
+  children: React.ReactNode;
 }
 
-export default function NavItem({ href, label, icon }: NavItemProps) {
+export default function NavItem({ href, children }: NavItemProps) {
   const pathname = usePathname();
 
   return (
@@ -25,8 +19,7 @@ export default function NavItem({ href, label, icon }: NavItemProps) {
       href={href}
       className={clsx(styles.container, pathname === href && styles.active)}
     >
-      <Home className={styles.icon} />
-      {/* <FontAwesomeIcon icon={icon} className={styles.icon} /> */}
+      {children}
     </Link>
   );
 }

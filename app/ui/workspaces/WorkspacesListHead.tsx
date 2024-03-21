@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDownAZ, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { Plus, ArrowDownAZ } from "lucide-react";
 
 import styles from "@/app/styles/WorkspacesListHead.module.css";
 
@@ -8,13 +7,13 @@ export default function WorkspacesListHead() {
     <div className={styles.container}>
       <div className={styles.addNew}>
         <div className={styles.icon}>
-          <FontAwesomeIcon icon={faPlus} />
+          <Plus size={16} />
         </div>
         <div className={styles.text}>New</div>
       </div>
 
       <div className={styles.filter}>
-        <FontAwesomeIcon icon={faArrowDownAZ} />
+        <ArrowDownAZ size={16} />
       </div>
     </div>
   );

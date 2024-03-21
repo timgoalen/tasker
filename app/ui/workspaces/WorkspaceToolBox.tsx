@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashCan, faPenToSquare } from "@fortawesome/free-regular-svg-icons";
+import { FolderPen, Trash } from "lucide-react";
 
 import styles from "@/app/styles/WorkspaceToolBox.module.css";
 
@@ -13,12 +12,12 @@ export default function WorkspaceToolBox() {
       animate={{ y: 0, opacity: 1, scale: 1 }}
     >
       <div className={styles.tool}>
-        <FontAwesomeIcon icon={faPenToSquare} className={styles.icon} />
+        <FolderPen size={16} />
         <div>Rename</div>
       </div>
 
       <div className={styles.tool}>
-        <FontAwesomeIcon icon={faTrashCan} className={styles.icon} />
+        <Trash size={16} />
         <div>Delete</div>
       </div>
     </motion.div>

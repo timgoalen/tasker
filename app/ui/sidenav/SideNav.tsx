@@ -1,15 +1,14 @@
 "use client";
 import { useState } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faAnglesDown } from "@fortawesome/free-solid-svg-icons";
+import { ChevronsDown, Menu } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
 
 import styles from "@/app/styles/SideNav.module.css";
 import NavLinks from "./NavLinks";
 
 export default function SideNav() {
-  const [isSideNavOpen, setIsSideNavOpen] = useState(true);
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
   function toggleSideNav() {
     setIsSideNavOpen(!isSideNavOpen);
@@ -24,7 +23,7 @@ export default function SideNav() {
         onMouseLeave={() => setIsSideNavOpen(false)}
         onClick={toggleSideNav}
       >
-        <FontAwesomeIcon icon={isSideNavOpen ? faAnglesDown : faBars} />
+        {isSideNavOpen ? <ChevronsDown /> : <Menu />}
       </button>
 
       {/* Nav Bar */}
