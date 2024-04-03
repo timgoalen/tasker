@@ -7,7 +7,12 @@ import styles from "@/app/styles/WorkspaceListItem.module.css";
 import WorkspaceToolBox from "./WorkspaceToolBox";
 import useClickOutside from "@/app/hooks/useClickOutside";
 
-export default function WorkspaceListItem() {
+interface Workspace {
+  title: string;
+  updatedOn: Date;
+}
+
+export default function WorkspaceListItem({ title, updatedOn }: Workspace) {
   const [showTools, setShowTools] = useState(false);
   const ref = useRef(null);
 
@@ -28,9 +33,9 @@ export default function WorkspaceListItem() {
           <File />
         </div>
 
-        <div className={styles.title}>Workspace Title Goes Here</div>
+        <div className={styles.title}>{title}</div>
 
-        <div className={styles.date}>01/03/24</div>
+        <div className={styles.date}>{updatedOn.toString()}</div>
 
         <div ref={ref} className={styles.options} onClick={toggleVisibility}>
           <EllipsisVertical

@@ -21,22 +21,22 @@ export default function RegisterForm() {
     formState: { errors },
   } = useForm<IFormInput>();
 
-  async function registerUser(data) {
-    try {
-      const response = await axios.post(
-        "https://8000-timgoalen-taskerapi-ghx0286jesu.ws-eu110.gitpod.io/dj-rest-auth/registration/",
-        data
-      );
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // async function registerUser(data) {
+  //   try {
+  //     const response = await axios.post(
+  //       "https://8000-timgoalen-taskerapi-ghx0286jesu.ws-eu110.gitpod.io/dj-rest-auth/registration/",
+  //       data
+  //     );
+  //     console.log(response);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     console.log("sending signup form");
     console.log(data);
-    registerUser(data);
+    // registerUser(data);
   };
 
   return (
@@ -81,7 +81,7 @@ export default function RegisterForm() {
           ></input>
           <p className={styles.errors}>{errors.password1?.message}</p>
 
-          <label>Password2</label>
+          <label>Password (again)</label>
           <input
             {...register("password2", {
               required: "Please enter a password",
