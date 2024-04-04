@@ -1,6 +1,8 @@
 "use client";
+
 import { useState, useRef } from "react";
 
+import { format } from "date-fns";
 import { File, EllipsisVertical } from "lucide-react";
 
 import styles from "@/app/styles/WorkspaceListItem.module.css";
@@ -15,6 +17,7 @@ interface Workspace {
 export default function WorkspaceListItem({ title, updatedOn }: Workspace) {
   const [showTools, setShowTools] = useState(false);
   const ref = useRef(null);
+  const formattedDate = format(updatedOn, "MMM do yyyy");
 
   function toggleVisibility() {
     setShowTools(!showTools);
@@ -35,7 +38,7 @@ export default function WorkspaceListItem({ title, updatedOn }: Workspace) {
 
         <div className={styles.title}>{title}</div>
 
-        <div className={styles.date}>{updatedOn.toString()}</div>
+        <div className={styles.date}>{formattedDate}</div>
 
         <div ref={ref} className={styles.options} onClick={toggleVisibility}>
           <EllipsisVertical
