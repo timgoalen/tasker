@@ -1,0 +1,35 @@
+.container {
+    width: 96%;
+    margin: auto;
+  }
+  
+  .content {
+    min-height: 88vh;
+    min-height: 88dvh;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: var(--page-box-shadow);
+    background-color: var(--white);
+    font-size: 1.25rem;
+  }
+  
+  @media screen and (min-width: 640px) {
+    .container {
+      width: 82%;
+    }
+  
+    .content {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .container {
+      width: 65%;
+    }
+  
+    .content {
+      padding: 2rem;
+    }
+  }
+  

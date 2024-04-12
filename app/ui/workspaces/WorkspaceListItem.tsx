@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Link from "next/link";
 
 import { format } from "date-fns";
 import { File, EllipsisVertical } from "lucide-react";
@@ -12,12 +13,14 @@ import useClickOutside from "@/app/hooks/useClickOutside";
 interface Workspace {
   title: string;
   updatedOn: Date;
+  id: number;
 }
 
-export default function WorkspaceListItem({ title, updatedOn }: Workspace) {
+export default function WorkspaceListItem({ title, updatedOn, id }: Workspace) {
   const [showTools, setShowTools] = useState(false);
   const ref = useRef(null);
   const formattedDate = format(updatedOn, "MMM do yyyy");
+  const directHref = `/document/${id}`;
 
   function toggleVisibility() {
     setShowTools(!showTools);
@@ -36,7 +39,11 @@ export default function WorkspaceListItem({ title, updatedOn }: Workspace) {
           <File />
         </div>
 
-        <div className={styles.title}>{title}</div>
+        <Link href={directHref}>
+          <div className={styles.title}>
+            {title}
+          </div>
+        </Link>
 
         <div className={styles.date}>{formattedDate}</div>
 

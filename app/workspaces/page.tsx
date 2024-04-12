@@ -3,14 +3,15 @@ import WorkspacesListHead from "../ui/workspaces/WorkspacesListHead";
 import WorkspaceListItem from "../ui/workspaces/WorkspaceListItem";
 import WorkspaceListSpacer from "../ui/workspaces/WorkspaceListSpacer";
 import styles from "@/app/styles/WorkspacesPage.module.css";
-import { fetchWorkspaces } from "@/app/lib/data";
+import { fetchAllWorkspaces } from "@/app/lib/data";
 
 export default async function Page() {
-  const workspaces = await fetchWorkspaces();
+  const workspaces = await fetchAllWorkspaces();
 
   interface Workspace {
     title: string;
     updated_on: Date;
+    id: number;
   }
 
   return (
@@ -26,6 +27,7 @@ export default async function Page() {
               <WorkspaceListItem
                 title={workspace.title}
                 updatedOn={workspace.updated_on}
+                id={workspace.id}
               />
               <WorkspaceListSpacer />
             </>
