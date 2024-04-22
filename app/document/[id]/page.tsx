@@ -1,4 +1,4 @@
-import { fetchWorkspace } from "@/app/lib/data";
+import { fetchWorkspace } from "@/app/actions/workspaces";
 import Header from "@/app/ui/header/Header";
 import styles from "@/app/styles/Document.module.css";
 

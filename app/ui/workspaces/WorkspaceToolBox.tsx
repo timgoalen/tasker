@@ -1,9 +1,27 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { FolderPen, Trash } from "lucide-react";
 
 import styles from "@/app/styles/WorkspaceToolBox.module.css";
+import { deleteWorkspace } from "@/app/actions/workspaces";
+import { EventEmitter } from "stream";
+import { useState } from "react";
 
-export default function WorkspaceToolBox() {
+interface WorkspaceToolBoxProps {
+  id: string;
+}
+
+export default function WorkspaceToolBox({ id }: WorkspaceToolBoxProps) {
+  function deleteAction(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setTestText(true);
+    console.log(`deleted workspace: ${id}`);
+    // deleteWorkspace(id);
+  }
+
+  const [testText, setTestText] = useState(false);
+
   return (
     <motion.div
       className={styles.container}
@@ -16,10 +34,17 @@ export default function WorkspaceToolBox() {
         <div>Rename</div>
       </div>
 
-      <div className={styles.tool}>
+      {/* <div className={styles.tool} onClick={() => removeWorkspace}>
         <Trash size={16} />
         <div>Delete</div>
-      </div>
+      </div> */}
+
+      <form onSubmit={() => deleteAction} className={styles.tool}>
+        <Trash size={16} />
+        <button type="submit">Delete</button>
+      </form>
+
+      {testText && <p>submitted</p>}
     </motion.div>
   );
 }

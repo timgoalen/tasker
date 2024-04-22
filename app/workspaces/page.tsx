@@ -3,15 +3,15 @@ import WorkspacesListHead from "../ui/workspaces/WorkspacesListHead";
 import WorkspaceListItem from "../ui/workspaces/WorkspaceListItem";
 import WorkspaceListSpacer from "../ui/workspaces/WorkspaceListSpacer";
 import styles from "@/app/styles/WorkspacesPage.module.css";
-import { fetchAllWorkspaces } from "@/app/lib/data";
+import { fetchWorkspacesList } from "@/app/actions/workspaces";
 
 export default async function Page() {
-  const workspaces = await fetchAllWorkspaces();
+  const workspaces = await fetchWorkspacesList();
 
   interface Workspace {
     title: string;
     updated_on: Date;
-    id: number;
+    id: string;
   }
 
   return (

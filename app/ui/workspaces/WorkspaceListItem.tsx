@@ -13,7 +13,7 @@ import useClickOutside from "@/app/hooks/useClickOutside";
 interface Workspace {
   title: string;
   updatedOn: Date;
-  id: number;
+  id: string;
 }
 
 export default function WorkspaceListItem({ title, updatedOn, id }: Workspace) {
@@ -40,9 +40,7 @@ export default function WorkspaceListItem({ title, updatedOn, id }: Workspace) {
         </div>
 
         <Link href={directHref}>
-          <div className={styles.title}>
-            {title}
-          </div>
+          <div className={styles.title}>{title}</div>
         </Link>
 
         <div className={styles.date}>{formattedDate}</div>
@@ -56,7 +54,7 @@ export default function WorkspaceListItem({ title, updatedOn, id }: Workspace) {
           />
         </div>
 
-        {showTools && <WorkspaceToolBox />}
+        {showTools && <WorkspaceToolBox id={id} />}
       </div>
     </>
   );
